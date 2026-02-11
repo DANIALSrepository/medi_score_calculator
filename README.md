@@ -28,11 +28,11 @@ To run the program, use code:
 ---
 
 ##  Scoring System
-### * Respiration Rate*
-### * Oxygen Saturation*
-### * Consciousness*
-### * Temperature*
-### * Supplemental Oxygen*
+- Respiration Rate
+- Oxygen Saturation
+- Consciousness
+- Temperature
+- Supplemental Oxygen
 
 
 ##  Assumptions & Considerations
