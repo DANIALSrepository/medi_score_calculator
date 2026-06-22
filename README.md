@@ -1,42 +1,51 @@
-# Medi Score Calculation Program
+# Medi Score Calculator
 
-##  Overview
-This program calculates the *Medi Score* for a patient based on their *physiological ranges* 
-The Medi Score is a *simple rule-based scoring system* that helps identify *ill patients* based on their *respiration rate, oxygen saturation, consciousness level, temperature, and supplemental oxygen use*.
+## Overview
 
-The program **validates all inputs** and ensures that *temperature values are rounded to 1 decimal place* (as per test requirements).
+This program calculates the **Medi Score** for a patient from their physiological readings. The Medi Score is a simple rule-based scoring system that helps flag potentially unwell patients based on five observations: respiration rate, oxygen saturation, consciousness level, temperature, and whether the patient is receiving supplemental oxygen.
 
----
+The program validates every input and rounds temperature values to one decimal place (as required by the test cases).
 
-## How to Run the Program
+## How to run
 
-### *1 Install Python (if not already installed)*
-You can check if Python is installed by running:
+### 1. Install Python (if you don't already have it)
 
-If Python is not installed, download it from [Python.org](https://www.python.org/downloads/).
+Check whether Python is installed:
 
-### *2 Run the Script*
-To run the program, use code:
+```bash
+python --version
+```
 
+If it isn't, download it from [python.org](https://www.python.org/downloads/).
 
-### *3 Follow the Prompts*
-- Enter the patient's **name*.
-- Input the patient's **physiological data** (respiration rate, oxygen saturation, temperature, etc.).
-- The program will *validate your inputs* to ensure they are within the correct range.
-- The final *Medi Score* will be displayed, along with a breakdown of how it was calculated.
+### 2. Run the script
 
----
+From the project folder:
 
-##  Scoring System
-- Respiration Rate
-- Oxygen Saturation
-- Consciousness
+```bash
+python medi_score.py
+```
+
+### 3. Follow the prompts
+
+- Enter the patient's name.
+- Enter the patient's physiological readings (respiration rate, oxygen saturation, temperature, and so on).
+- The program validates each input to make sure it falls within an acceptable range.
+- The final Medi Score is displayed, along with a breakdown of how it was calculated.
+
+## Scoring system
+
+Each observation is scored against defined physiological ranges, and the individual scores are summed to give the total Medi Score. The five inputs are:
+
+- Respiration rate
+- Oxygen saturation
+- Consciousness level
 - Temperature
-- Supplemental Oxygen
+- Supplemental oxygen
 
+## Assumptions and considerations
 
-##  Assumptions & Considerations
-- *Temperature values are automatically rounded to 1 decimal place.*
-- *All input values are validated** to prevent incorrect data entries.
-- *Oxygen saturation scoring accounts for whether the patient is on oxygen or not.*
-- *Edge cases* (e.g., a patient on oxygen with high saturation) are correctly assigned.
+- Temperature values are automatically rounded to one decimal place.
+- All inputs are validated to prevent incorrect or out-of-range entries.
+- Oxygen saturation scoring takes into account whether the patient is breathing air or on supplemental oxygen.
+- Edge cases (for example, a patient on oxygen with a high saturation reading) are handled and scored correctly.
